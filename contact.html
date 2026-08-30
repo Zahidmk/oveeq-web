@@ -77,11 +77,11 @@ nav.nav-light{
 .nav-logo .logo-w{opacity:1}.nav-logo .logo-b{opacity:0}
 nav.nav-light .nav-logo .logo-w{opacity:0}nav.nav-light .nav-logo .logo-b{opacity:1}
 .nav-links{display:flex;gap:32px;list-style:none;align-items:center}
-.nav-links a{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.65);text-decoration:none;font-weight:400;transition:color 0.25s;position:relative}
+.nav-links a{font-size:12.5px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.65);text-decoration:none;font-weight:400;transition:color 0.25s;position:relative}
 .nav-links a::after{content:'';position:absolute;left:0;bottom:-3px;width:0;height:1px;background:var(--purple3);transition:width 0.3s}
 .nav-links a:hover{color:#fff!important}.nav-links a:hover::after,.nav-links a.active::after{width:100%}
 .nav-links a.active{color:#fff!important}
-nav.nav-light .nav-links a{color:rgba(4,6,15,0.52)}
+nav.nav-light .nav-links a{color:#001c66}
 nav.nav-light .nav-links a:hover{color:var(--purple)!important}
 nav.nav-light .nav-links a.active{color:var(--purple)!important}
 .nav-item{position:relative}
@@ -91,24 +91,61 @@ nav.nav-light .nav-links a.active{color:var(--purple)!important}
 .nav-dd-wide{left:auto;right:-28px;transform:none}
 .nav-dd-wide.nav-dd-left{left:-28px;right:auto;transform:none}
 .nav-item:hover .nav-dd,.nav-item:focus-within .nav-dd{opacity:1;visibility:visible;pointer-events:auto}
-.nav-dd-panel{background:#fff;border-radius:18px;box-shadow:0 26px 60px rgba(4,6,15,0.28),0 0 0 1px rgba(4,6,15,0.06);padding:10px;min-width:300px;transform:translateY(-6px);transition:transform .22s ease}
+.nav-dd-panel{background:rgba(7,10,26,0.97);backdrop-filter:blur(40px) saturate(160%);-webkit-backdrop-filter:blur(40px) saturate(160%);border-radius:26px;border:1px solid rgba(255,255,255,0.12);box-shadow:0 30px 70px rgba(0,0,0,0.55),inset 0 1px 0 rgba(255,255,255,0.12);padding:16px;min-width:320px;transform:translateY(-6px);transition:transform .22s ease,background .35s ease,border-color .35s ease}
+nav.nav-light .nav-dd-panel{background:rgba(255,255,255,0.97);border-color:rgba(4,6,15,0.08);box-shadow:0 30px 70px rgba(4,6,15,0.28),inset 0 1px 0 rgba(255,255,255,0.8)}
 .nav-item:hover .nav-dd-panel,.nav-item:focus-within .nav-dd-panel{transform:translateY(0)}
-.nav-dd-item{display:block;padding:12px 16px;border-radius:12px;text-decoration:none;transition:background .2s ease}
-.nav-dd-item:hover{background:rgba(0,102,255,0.07)}
-.nav-dd-name{display:block;font-size:13px;font-weight:700;color:#04060f;letter-spacing:0;text-transform:none;margin-bottom:3px}
-.nav-dd-desc{display:block;font-size:11.5px;color:rgba(4,6,15,0.5);font-weight:400;text-transform:none;letter-spacing:0;line-height:1.45}
-.nav-dd-panel-wide{display:flex;gap:0;min-width:700px;padding:22px}
-.nav-dd-col{flex:1;padding:0 20px}
-.nav-dd-col+.nav-dd-col{border-left:1px solid rgba(4,6,15,0.08)}
-.nav-dd-panel .nav-dd-cat{display:inline-block;font-size:12.5px;font-weight:700;color:#0066ff!important;text-decoration:none;margin-bottom:12px;letter-spacing:0.01em;text-transform:none!important}
+.nav-dd-item{display:block;padding:14px 18px;border-radius:14px;text-decoration:none;transition:background .2s ease;margin-bottom:2px}
+.nav-dd-item:last-child{margin-bottom:0}
+.nav-dd-item:hover{background:rgba(255,255,255,0.08)}
+nav.nav-light .nav-dd-item:hover{background:rgba(0,102,255,0.07)}
+.nav-dd-name{display:block;font-size:14.5px;font-weight:700;color:#fff;letter-spacing:0;text-transform:none;margin-bottom:4px}
+nav.nav-light .nav-dd-name{color:#04060f}
+.nav-dd-desc{display:block;font-size:13px;color:rgba(255,255,255,0.55);font-weight:400;text-transform:none;letter-spacing:0;line-height:1.5}
+nav.nav-light .nav-dd-desc{color:rgba(4,6,15,0.5)}
+.nav-dd-panel-wide{display:flex;gap:0;min-width:720px;padding:26px}
+.nav-dd-col{flex:1;padding:0 26px}
+.nav-dd-col:first-child{padding-left:6px}
+.nav-dd-col:last-child{padding-right:6px}
+.nav-dd-col+.nav-dd-col{border-left:1px solid rgba(255,255,255,0.12)}
+nav.nav-light .nav-dd-col+.nav-dd-col{border-left-color:rgba(4,6,15,0.08)}
+.nav-dd-panel .nav-dd-cat{display:inline-block;font-size:13px;font-weight:700;color:#3385ff!important;text-decoration:none;margin-bottom:16px;letter-spacing:0.01em;text-transform:none!important}
+nav.nav-light .nav-dd-panel .nav-dd-cat{color:#0066ff!important}
 .nav-dd-panel .nav-dd-cat:hover{text-decoration:underline}
-.nav-dd-brands{font-size:12px;line-height:1.85;color:rgba(4,6,15,0.55);font-weight:400}
+.nav-dd-cathead{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.nav-dd-panel .nav-dd-cat{margin-bottom:0}
+.nav-dd-cat-icon{width:28px;height:28px;border-radius:9px;background:rgba(51,133,255,0.16);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .3s ease,transform .3s ease}
+.nav-dd-cat-icon svg{width:15px;height:15px;color:#3385ff;display:block}
+.nav-dd-col:hover .nav-dd-cat-icon{background:rgba(51,133,255,0.32);transform:scale(1.08) rotate(-4deg)}
+nav.nav-light .nav-dd-cat-icon{background:rgba(0,102,255,0.1)}
+nav.nav-light .nav-dd-col:hover .nav-dd-cat-icon{background:rgba(0,102,255,0.18)}
 .nav-dd-panel .nav-dd-sublist{list-style:none;margin:0;padding:0}
 .nav-dd-panel .nav-dd-sublist li{margin:0}
-.nav-dd-panel .nav-dd-sublist a{display:block;font-size:12px;line-height:1.7;color:rgba(4,6,15,0.55)!important;font-weight:400!important;text-decoration:none;text-transform:none!important;letter-spacing:0!important;padding:2px 0;transition:color .2s ease}
-.nav-dd-panel .nav-dd-sublist a:hover{color:#0066ff!important}
+.nav-dd-panel .nav-dd-sublist a{display:block;font-size:13px;line-height:2;color:rgba(255,255,255,0.62)!important;font-weight:400!important;text-decoration:none;text-transform:none!important;letter-spacing:0!important;padding:3px 0;transition:color .2s ease}
+nav.nav-light .nav-dd-panel .nav-dd-sublist a{color:#001c66!important}
+.nav-dd-panel .nav-dd-sublist a:hover{color:#fff!important}
+nav.nav-light .nav-dd-panel .nav-dd-sublist a:hover{color:#0066ff!important}
 @media(hover:none){.nav-dd{display:none}}
-.nav-cta{padding:9px 22px;background:linear-gradient(135deg,#0066ff,#003fcc);color:#fff!important;font-weight:700!important;border-radius:50px;font-size:11px!important;letter-spacing:0.08em;box-shadow:0 4px 16px rgba(0,102,255,0.4);transition:all 0.25s!important;border:1px solid rgba(51,133,255,0.3)}
+/* MOBILE NAV */
+.nav-burger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:34px;height:34px;background:none;border:none;cursor:pointer;padding:0;flex-shrink:0}
+.nav-burger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .3s ease,opacity .3s ease}
+nav.nav-light .nav-burger span{background:#04060f}
+.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-mobile{position:fixed;inset:0;background:rgba(4,6,15,0.97);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);z-index:150;opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease;display:flex;align-items:center;justify-content:center}
+.nav-mobile.open{opacity:1;visibility:visible}
+.nav-mobile-inner{display:flex;flex-direction:column;align-items:center;gap:26px;text-align:center;padding:32px}
+.nav-mobile-link{font-size:26px;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-0.01em}
+.nav-mobile-link.active{color:var(--purple3)}
+.nav-mobile-cta{margin-top:14px;padding:16px 44px;background:linear-gradient(135deg,#0066ff,#003fcc);color:#fff!important;font-weight:700;border-radius:50px;text-decoration:none;font-size:16px;box-shadow:0 8px 24px rgba(0,102,255,0.4)}
+@media(max-width:860px){
+  .nav-links{display:none}
+  .nav-burger{display:flex}
+}
+@media(min-width:861px){
+  .nav-mobile{display:none!important}
+}
+.nav-cta{padding:9px 22px;background:linear-gradient(135deg,#0066ff,#003fcc);color:#fff!important;font-weight:700!important;border-radius:50px;font-size:12.5px!important;letter-spacing:0.08em;box-shadow:0 4px 16px rgba(0,102,255,0.4);transition:all 0.25s!important;border:1px solid rgba(51,133,255,0.3)}
 .nav-cta::after{display:none!important}.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,102,255,0.55)!important;background:linear-gradient(135deg,#3385ff,#0055ee)!important}
 
 /* PAGE HERO */
@@ -121,7 +158,7 @@ nav.nav-light .nav-links a.active{color:var(--purple)!important}
 .pr1{width:500px;height:500px;top:50%;right:-80px;transform:translateY(-50%)}
 .pr2{width:320px;height:320px;top:50%;right:30px;transform:translateY(-50%);animation-delay:3s;border-color:rgba(0,102,255,0.11)}
 .ph-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}
-.ph-tag{display:inline-flex;align-items:center;gap:12px;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--purple);font-weight:700;margin-bottom:28px}
+.ph-tag{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--purple);font-weight:700;margin-bottom:28px}
 .ph-tag::before{content:'';width:28px;height:1px;background:var(--purple)}
 .ph-title{font-size:clamp(40px,5.5vw,70px);font-weight:900;line-height:1.06;color:var(--text);letter-spacing:-0.02em}
 .ph-title .accent{background:linear-gradient(135deg,#0055ee 0%,#8C35D6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -136,14 +173,15 @@ nav.nav-light .nav-links a.active{color:var(--purple)!important}
 .contact-main{background:linear-gradient(150deg,#f2f7ff 0%,var(--blue-pale) 55%,#c3daff 100%);padding:72px 72px 80px;position:relative;overflow:hidden}
 .contact-main::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,49,143,0.08) 1px,transparent 1px);background-size:26px 26px;pointer-events:none}
 .contact-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr 0.92fr;gap:40px;align-items:stretch}
+.contact-grid>*{min-width:0}
 
 /* FORM CARD */
-.form-card{background:linear-gradient(135deg,#04060f 0%,#050a22 50%,#060e3a 100%);border-radius:28px;padding:44px 44px;position:relative;overflow:hidden;box-shadow:0 24px 60px rgba(0,20,80,0.25);transition:box-shadow 0.4s ease}
+.form-card{background:linear-gradient(135deg,#04060f 0%,#050a22 50%,#060e3a 100%);border-radius:64px;padding:44px 44px;position:relative;overflow:hidden;box-shadow:0 24px 60px rgba(0,20,80,0.25);transition:box-shadow 0.4s ease}
 .form-card:hover{box-shadow:0 28px 70px rgba(0,30,110,0.32)}
 .form-card::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(51,133,255,0.08) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
 .form-card-glow{position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(0,102,255,0.35) 0%,transparent 65%);top:-160px;right:-140px;pointer-events:none;animation:blobFloat1 14s ease-in-out infinite}
 .form-card-inner{position:relative;z-index:1}
-.fc-tag{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(51,133,255,0.9);font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.fc-tag{font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(51,133,255,0.9);font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:10px}
 .fc-tag::before{content:'';width:20px;height:2px;background:rgba(51,133,255,0.8);border-radius:1px}
 .fc-title{font-size:clamp(22px,2.2vw,30px);font-weight:900;color:#fff;line-height:1.15;margin-bottom:6px;letter-spacing:-0.02em}
 .fc-title .accent{background:linear-gradient(135deg,#3385ff 0%,#8C35D6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -151,9 +189,10 @@ nav.nav-light .nav-links a.active{color:var(--purple)!important}
 
 .contact-form{display:flex;flex-direction:column;gap:0;position:relative;z-index:1}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:15px}
+.form-row>*{min-width:0}
 .form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:15px;transition:transform 0.3s ease}
 .form-group:hover{transform:translateY(-1px)}
-.form-label{font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);font-weight:700}
+.form-label{font-size:11.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.4);font-weight:700}
 .form-input,.form-textarea,.form-select{width:100%;padding:11px 18px;border:1.5px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.06);color:#fff;font-family:'Codec Pro',sans-serif;font-size:13.5px;font-weight:400;border-radius:999px;outline:none;transition:border-color 0.25s,box-shadow 0.25s,background 0.25s;appearance:none;-webkit-appearance:none}
 .form-textarea{border-radius:20px}
 .form-input:hover,.form-textarea:hover,.form-select:hover{border-color:rgba(255,255,255,0.28)}
@@ -165,12 +204,12 @@ nav.nav-light .nav-links a.active{color:var(--purple)!important}
 .form-submit{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:15px 40px;background:linear-gradient(135deg,#3385ff,#0055ee);color:#fff;font-family:'Codec Pro',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border:none;border-radius:999px;cursor:pointer;transition:all 0.35s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 8px 26px rgba(0,102,255,0.4);width:100%;margin-top:10px}
 .form-submit:hover{transform:translateY(-2px) scale(1.015);box-shadow:0 14px 36px rgba(0,102,255,0.55),0 0 0 1.5px rgba(255,255,255,0.4),0 0 30px rgba(120,170,255,0.5)}
 .form-submit:active{transform:translateY(0) scale(1)}
-.form-note{font-size:10.5px;color:rgba(255,255,255,0.32);margin-top:14px;text-align:center;line-height:1.5}
+.form-note{font-size:12.5px;color:rgba(255,255,255,0.32);margin-top:14px;text-align:center;line-height:1.5}
 .form-note a{color:rgba(255,255,255,0.6)}
 
 /* INFO COLUMN */
 .info-card{display:flex;flex-direction:column;gap:30px}
-.ic-tag{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--purple);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.ic-tag{font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:var(--purple);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px}
 .ic-tag::before{content:'';width:20px;height:2px;background:var(--purple);border-radius:1px}
 .ic-title{font-size:clamp(26px,2.6vw,36px);font-weight:900;color:var(--text);line-height:1.15;margin-bottom:8px;letter-spacing:-0.02em}
 .ic-title .accent{color:var(--purple)}
@@ -189,10 +228,10 @@ nav.nav-light .nav-links a.active{color:var(--purple)!important}
 .cm-seg:hover .cm-icon{background:rgba(255,255,255,0.28);border-color:rgba(255,255,255,0.6);transform:scale(1.12) rotate(-4deg);box-shadow:0 0 18px rgba(255,255,255,0.4)}
 .cm-icon svg{width:16px;height:16px;color:#fff;display:block}
 .cm-icon svg path[opacity]{color:rgba(255,255,255,0.6)}
-.cm-label{font-size:8.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:5px;font-weight:700}
+.cm-label{font-size:11.5px;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:5px;font-weight:700}
 .cm-value{font-size:12.5px;font-weight:700;color:#fff;transition:opacity 0.25s;display:block;letter-spacing:-0.01em;line-height:1.35}
 .cm-seg:hover .cm-value{opacity:0.82}
-.cm-note{font-size:10px;color:rgba(255,255,255,0.55);margin-top:2px;font-weight:300;line-height:1.4}
+.cm-note{font-size:12px;color:rgba(255,255,255,0.55);margin-top:2px;font-weight:300;line-height:1.4}
 
 /* SOCIAL PILLS */
 .social-row{display:flex;gap:12px}
@@ -206,8 +245,8 @@ nav.nav-light .nav-links a.active{color:var(--purple)!important}
 .social-pill:hover{background:linear-gradient(135deg,#3385ff,#0055ee);border-color:rgba(255,255,255,0.45);box-shadow:0 10px 26px rgba(0,102,255,0.4),0 0 0 1px rgba(255,255,255,0.25),0 0 24px rgba(120,170,255,0.5);transform:translateY(-3px);color:#fff}
 
 /* NEXT STEPS */
-.next-steps{background:#fff;border-radius:24px;padding:22px 24px 8px;border:1px solid var(--bdr)}
-.ns-intro{font-size:11.5px;line-height:1.6;color:var(--text-dim);font-weight:300;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--bdr)}
+.next-steps{background:#fff;border-radius:56px;padding:22px 24px 8px;border:1px solid var(--bdr)}
+.ns-intro{font-size:13px;line-height:1.6;color:var(--text-dim);font-weight:300;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--bdr)}
 .ns-list{position:relative}
 .ns-list::before{content:'';position:absolute;left:19px;top:6px;bottom:6px;width:1px;background:linear-gradient(180deg,rgba(0,102,255,0.28),rgba(0,102,255,0.05))}
 .ns-item{display:grid;grid-template-columns:40px 1fr;gap:16px;align-items:flex-start;padding:15px 0;margin:0;border-radius:14px;transition:all 0.4s cubic-bezier(0.4,0,0.2,1);cursor:default;position:relative}
@@ -222,66 +261,180 @@ nav.nav-light .nav-links a.active{color:var(--purple)!important}
 .ns-text strong{color:var(--text);font-weight:700}
 
 /* MAP SECTION */
-.map-section{background:linear-gradient(150deg,#eef4ff 0%,var(--blue-pale) 100%);padding:80px 72px 110px;position:relative;overflow:hidden}
-.map-vector-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0.75;pointer-events:none;z-index:0}
-.map-grid{position:relative;z-index:1;display:grid;grid-template-columns:0.62fr 1fr;gap:44px;align-items:center}
-.map-pill{position:relative;height:540px;width:100%;max-width:373px;aspect-ratio:861/1247;border-radius:999px;overflow:hidden;box-shadow:0 22px 50px rgba(0,49,143,0.2);transition:box-shadow 0.45s ease,transform 0.45s ease;margin:0 auto;display:block;cursor:pointer;background:var(--blue-pale)}
-.map-pill:hover{box-shadow:0 28px 64px rgba(0,49,143,0.3);transform:scale(1.008)}
-.map-pill .rz-map{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transform-origin:70% 58%;transition:transform 1.3s cubic-bezier(0.16,1,0.3,1)}
-.map-pill:hover .rz-map{transform:scale(2.2)}
-.map-pill-hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);background:rgba(4,6,15,0.72);color:#fff;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:8px 16px;border-radius:999px;pointer-events:none;opacity:1;transition:opacity 0.3s ease;backdrop-filter:blur(6px);z-index:2}
-.map-pill:hover .map-pill-hint{opacity:0}
-.map-side{display:flex;flex-direction:column;gap:20px}
-.map-tag{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--purple);font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:10px}
-.map-tag::before{content:'';width:20px;height:2px;background:var(--purple);border-radius:1px}
-.map-title{font-size:clamp(22px,2.2vw,28px);font-weight:900;color:var(--text);line-height:1.2;letter-spacing:-0.02em}
-.map-sub{font-size:14.5px;line-height:1.7;color:var(--text-mid);font-weight:300}
-.map-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
-.map-pill-btn{display:inline-flex;align-items:center;gap:9px;padding:14px 24px;background:#fff;border:1.5px solid var(--bdr);border-radius:999px;color:var(--text);font-size:11.5px;font-weight:700;letter-spacing:0.04em;text-decoration:none;transition:all 0.3s ease}
-.map-pill-btn svg{width:15px;height:15px;color:var(--purple);flex-shrink:0}
-.map-pill-btn:hover{border-color:var(--purple);background:var(--blue-pale);transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,102,255,0.18)}
-.map-pill-btn.primary{background:linear-gradient(135deg,#0066ff,#003fcc);color:#fff;border-color:transparent;box-shadow:0 8px 22px rgba(0,102,255,0.35)}
+.map-section{position:relative;overflow:hidden;background:var(--navy);display:grid}
+.map-full{grid-area:1/1;display:block;width:100%;line-height:0;cursor:pointer}
+.map-photo{display:block;width:100%;height:auto}
+@media(min-width:1181px){.map-full{height:100%}.map-photo{height:100%;object-fit:cover;min-height:560px}}
+.map-overlay-card{grid-area:1/1;align-self:center;justify-self:start;margin:32px 0 32px 64px;width:500px;max-width:calc(100% - 128px);background:linear-gradient(155deg,rgba(0,102,255,0.32) 0%,rgba(0,63,204,0.15) 30%,rgba(4,6,15,0.86) 66%),rgba(4,6,15,0.7);backdrop-filter:blur(28px) saturate(160%);-webkit-backdrop-filter:blur(28px) saturate(160%);border:1px solid rgba(102,161,255,0.3);border-radius:32px;padding:40px 44px;box-shadow:0 36px 90px rgba(0,10,35,0.6),inset 0 1px 0 rgba(255,255,255,0.12);z-index:3;display:flex;flex-direction:column;gap:18px}
+.map-tag{font-size:13px;letter-spacing:0.22em;text-transform:uppercase;color:var(--purple3);font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:10px}
+.map-tag::before{content:'';width:24px;height:2px;background:var(--purple3);border-radius:1px}
+.map-title{font-size:clamp(26px,2.6vw,36px);font-weight:900;color:#fff;line-height:1.15;letter-spacing:-0.02em}
+.map-sub{font-size:16px;line-height:1.6;color:rgba(210,228,255,0.68);font-weight:300}
+.map-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
+.map-pill-btn{display:inline-flex;align-items:center;gap:9px;padding:16px 28px;background:#fff;border:1.5px solid transparent;border-radius:999px;color:var(--text);font-size:14px;font-weight:700;letter-spacing:0.04em;text-decoration:none;transition:all 0.3s ease}
+.map-pill-btn svg{width:16px;height:16px;color:var(--purple);flex-shrink:0}
+.map-pill-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,0.25)}
+.map-pill-btn.primary{background:linear-gradient(135deg,#0066ff,#003fcc);color:#fff;border-color:transparent;box-shadow:0 10px 26px rgba(0,102,255,0.4)}
 .map-pill-btn.primary svg{color:#fff}
-.map-pill-btn.primary:hover{box-shadow:0 12px 30px rgba(0,102,255,0.5),0 0 0 1.5px rgba(255,255,255,0.4);background:linear-gradient(135deg,#3385ff,#0055ee)}
+.map-pill-btn.primary:hover{box-shadow:0 14px 34px rgba(0,102,255,0.55),0 0 0 1.5px rgba(255,255,255,0.4);background:linear-gradient(135deg,#3385ff,#0055ee)}
+.map-details{margin-top:4px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.14)}
+.map-details-tag{font-size:13px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.4);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.map-details-tag::before{content:'';width:24px;height:2px;background:var(--purple3);border-radius:1px}
+.map-details-list{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
+.mdi{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.1);min-width:0}
+.mdi:nth-child(2),.mdi:last-child{grid-column:1/-1}
+.mdi:last-child{border-bottom:none}
+.mdi-icon{width:38px;height:38px;border-radius:11px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.mdi-icon svg{width:17px;height:17px;color:var(--purple3)}
+.mdi-body{display:flex;flex-direction:column;gap:3px;min-width:0}
+.mdi-label{font-size:11.5px;letter-spacing:0.04em;color:rgba(255,255,255,0.4);font-weight:600;text-transform:uppercase}
+.mdi-value{font-size:15.5px;font-weight:700;color:#fff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
 /* LOCATION BANNER */
-.location-banner{position:relative;overflow:hidden}
-.location-banner img{width:100%;height:auto;display:block;filter:saturate(1.08) contrast(1.02)}
-.location-banner-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,6,15,0.72) 0%,rgba(4,6,15,0.32) 42%,rgba(4,6,15,0.1) 68%,rgba(4,6,15,0.22) 100%)}
-.location-banner-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 72px}
-.lb-tag{display:inline-flex;align-items:center;gap:12px;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(51,133,255,0.9);margin-bottom:18px;width:fit-content}
+.location-banner{position:relative;z-index:2;cursor:pointer}
+.location-banner-clip{position:relative;overflow:hidden;box-shadow:0 0 0 0 rgba(244,184,96,0),0 0 0 0 rgba(244,184,96,0);transition:box-shadow 1s ease}
+.location-banner img{position:relative;z-index:0;width:100%;height:auto;display:block;filter:saturate(1.08) contrast(1.02);transition:transform 1.4s cubic-bezier(0.19,1,0.22,1),filter 0.9s ease}
+.location-banner-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(4,6,15,0.72) 0%,rgba(4,6,15,0.32) 42%,rgba(4,6,15,0.1) 68%,rgba(4,6,15,0.22) 100%);transition:opacity 0.9s ease}
+.location-banner:hover img{transform:scale(1.055);filter:saturate(1.25) contrast(1.05) brightness(1.05)}
+.location-banner:hover .location-banner-overlay{opacity:0.72}
+.location-banner:hover .location-banner-clip{box-shadow:0 -22px 60px 0 rgba(244,184,96,0.14),0 22px 60px 0 rgba(244,184,96,0.14)}
+.location-banner-content{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;justify-content:center;padding:0 72px}
+.lb-tag{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(51,133,255,0.9);margin-bottom:18px;width:fit-content}
 .lb-tag::before{content:'';width:28px;height:1px;background:rgba(51,133,255,0.8)}
 .lb-title{font-size:clamp(24px,2.6vw,34px);font-weight:900;color:#fff;line-height:1.2;letter-spacing:-0.02em;max-width:480px}
 .lb-title .accent{color:var(--blue-acc)}
 
 /* FOOTER */
 footer{background:linear-gradient(180deg,#04060f 0%,#050a22 100%);padding:52px 72px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.07);position:relative}
-.f-logo img{height:28px;display:block}.f-tag{font-size:11px;color:rgba(255,255,255,0.28);margin-top:8px;font-weight:300}
+.f-logo img{height:28px;display:block}.f-tag{font-size:12.5px;color:rgba(255,255,255,0.28);margin-top:8px;font-weight:300}
 .f-links{display:flex;gap:36px;list-style:none}
-.f-links a{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.25s}
-.f-links a:hover{color:rgba(255,255,255,0.8)}.f-copy{font-size:10px;color:rgba(255,255,255,0.2);font-weight:300}
+.f-links a{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.25s}
+.f-links a:hover{color:rgba(255,255,255,0.8)}.f-copy{font-size:12px;color:rgba(255,255,255,0.2);font-weight:300}
 .reveal{transition:opacity 0.9s cubic-bezier(0.4,0,0.2,1),transform 0.9s cubic-bezier(0.4,0,0.2,1)}
 .reveal.hidden{opacity:0;transform:translateY(32px)}.reveal.visible{opacity:1;transform:translateY(0)}
 .d1{transition-delay:0.1s}.d2{transition-delay:0.2s}.d3{transition-delay:0.3s}.d4{transition-delay:0.4s}
 @keyframes blobFloat1{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.08)}66%{transform:translate(-20px,20px) scale(0.95)}}
 @keyframes blobFloat2{0%,100%{transform:translate(0,0)}40%{transform:translate(-30px,40px) scale(1.06)}70%{transform:translate(20px,-20px) scale(0.98)}}
 @keyframes ringPulse{0%,100%{opacity:0.5;transform:translateY(-50%) scale(1)}50%{opacity:1;transform:translateY(-50%) scale(1.04)}}
-@media(max-width:1024px){nav,nav.scrolled{top:12px;width:calc(100% - 32px);padding:10px 16px}.page-hero{padding:120px 24px 72px;}.ph-inner{grid-template-columns:1fr;gap:40px}.ph-vector{display:none}.contact-main{padding:72px 24px}.contact-grid{grid-template-columns:1fr;gap:32px}.form-card{padding:36px 28px}.cm-pill{flex-direction:column;border-radius:28px}.cm-seg{padding:18px 24px!important;width:100%}.cm-divider{width:100%;height:1px;align-self:stretch;margin:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.28) 20%,rgba(255,255,255,0.28) 80%,transparent)}.map-section{padding:0 24px 72px}.map-vector-bg{display:none}.map-grid{grid-template-columns:1fr;gap:28px;justify-items:center}.map-pill{height:420px;max-width:290px;aspect-ratio:861/1247}footer{flex-direction:column;gap:28px;text-align:center;padding:40px 24px}.f-links{flex-wrap:wrap;justify-content:center}.location-banner{min-height:200px}.location-banner-content{padding:0 24px}.location-banner-overlay{background:linear-gradient(180deg,rgba(4,6,15,0.5) 0%,rgba(4,6,15,0.85) 100%)}}
+@media(max-width:1024px){nav,nav.scrolled{top:12px;width:calc(100% - 32px);padding:10px 16px}.page-hero{padding:120px 24px 72px;}.ph-inner{grid-template-columns:1fr;gap:40px}.ph-vector{display:none}.contact-main{padding:72px 24px}.contact-grid{grid-template-columns:1fr;gap:32px}.form-card{padding:36px 28px}.cm-pill{flex-direction:column;border-radius:40px}.cm-seg{padding:18px 24px!important;width:100%}.cm-divider{width:100%;height:1px;align-self:stretch;margin:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.28) 20%,rgba(255,255,255,0.28) 80%,transparent)}.map-section{overflow:visible;display:block;padding-bottom:32px}.map-overlay-card{margin:-44px 20px 0;width:auto;max-width:none;border-radius:24px;padding:28px}footer{flex-direction:column;gap:28px;text-align:center;padding:40px 24px}.f-links{flex-wrap:wrap;justify-content:center}.location-banner{min-height:200px}.location-banner-content{padding:0 24px}.location-banner-overlay{background:linear-gradient(180deg,rgba(4,6,15,0.5) 0%,rgba(4,6,15,0.85) 100%)}}
+@media(max-width:1180px) and (min-width:1025px){.map-section{overflow:visible;display:block;padding-bottom:32px}.map-overlay-card{margin:-44px 40px 0;width:auto;max-width:calc(100% - 80px)}}
+@media(max-width:560px){.form-row{grid-template-columns:1fr}.social-row{flex-wrap:wrap}.social-pill{flex:1 1 45%}}
 
   .logo-purple { filter:none; }
+
+/* ── MOBILE-NATIVE SCALE (phones) ── */
+@media(max-width:640px){
+  .page-hero{padding:96px 20px 44px}
+  .ph-sub{font-size:15px}
+  .contact-main{padding:40px 18px 48px}
+  .contact-grid{gap:22px}
+  .form-card{padding:24px 20px;border-radius:28px}
+  .form-card-glow{width:280px;height:280px;top:-100px;right:-90px}
+  .fc-sub{margin-bottom:18px}
+  .form-input,.form-textarea,.form-select{padding:10px 16px;font-size:13px}
+  .form-textarea{min-height:76px}
+  .form-submit{padding:13px 24px;margin-top:6px}
+  .form-note{font-size:11.5px;margin-top:10px}
+  .info-card{gap:20px}
+  .ic-sub{margin-bottom:16px}
+  .cm-pill{border-radius:24px}
+  .cm-seg{padding:16px 18px!important}
+  .cm-icon{width:30px;height:30px;border-radius:9px;margin-bottom:9px}
+  .cm-icon svg{width:14px;height:14px}
+  .cm-label{font-size:10px}
+  .social-row{gap:8px}
+  .social-pill{height:42px;padding:0 10px;gap:6px}
+  .social-pill svg{width:16px;height:16px}
+  .social-pill span{font-size:11px}
+  .next-steps{border-radius:24px;padding:16px 16px 4px}
+  .ns-intro{font-size:12px;margin-bottom:10px;padding-bottom:10px}
+  .ns-item{grid-template-columns:32px 1fr;gap:12px;padding:11px 0}
+  .ns-icon{width:32px;height:32px;border-radius:10px}
+  .ns-icon svg{width:15px;height:15px}
+  .ns-text{font-size:12.5px;padding-top:5px}
+  .map-section{padding-bottom:20px}
+  .map-overlay-card{margin:-28px 12px 0;border-radius:20px;padding:18px;gap:14px}
+  .map-tag{margin-bottom:2px}
+  .map-sub{font-size:13px}
+  .map-pill-btn{padding:11px 18px;font-size:12px;gap:7px}
+  .map-details{padding-top:14px}
+  .map-details-list{grid-template-columns:1fr}
+  .mdi{padding:9px 0;gap:10px}
+  .mdi:last-child{grid-column:auto}
+  .mdi-icon{width:28px;height:28px;border-radius:8px}
+  .mdi-icon svg{width:14px;height:14px}
+  .mdi-label{font-size:11px}
+  .mdi-value{white-space:normal}
+  .mdi-value{font-size:13px}
+  .location-banner{min-height:150px}
+  .lb-title{font-size:19px}
+  footer{padding:28px 18px;gap:18px}
+  .f-links{gap:20px;row-gap:10px}
+  .nav-mobile-link{font-size:22px}
+}
 </style>
 </head>
 <body>
 <div id="progress-bar"></div>
 <nav id="nav">
   <a href="index.html" class="nav-logo"><img src="assets/logos/brandmark-reverse.png" alt="OVEEQ" class="logo-w"><img src="assets/logos/logo-rgb.png"   alt="OVEEQ" class="logo-b logo-purple"></a>
-  <ul class="nav-links">
-    <li class="nav-item has-dd">
-      <a href="services.html">Services<svg class="nav-caret" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <ul class="nav-links"><li class="nav-item has-dd">
+      <a href="partners.html">Technology<svg class="nav-caret" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <div class="nav-dd">
         <div class="nav-dd-panel nav-dd-panel-wide">
           <div class="nav-dd-col">
-            <a href="services.html#hardware" class="nav-dd-cat">Hardware &amp; Infrastructure</a>
+            <div class="nav-dd-cathead"><span class="nav-dd-cat-icon"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M216,152v48a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8H208A8,8,0,0,1,216,152ZM208,48H48a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8H208a8,8,0,0,0,8-8V56A8,8,0,0,0,208,48Z" opacity="0.2"/><path d="M208,136H48a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V152A16,16,0,0,0,208,136Zm0,64H48V152H208v48Zm0-160H48A16,16,0,0,0,32,56v48a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V56A16,16,0,0,0,208,40Zm0,64H48V56H208v48ZM192,80a12,12,0,1,1-12-12A12,12,0,0,1,192,80Zm0,96a12,12,0,1,1-12-12A12,12,0,0,1,192,176Z"/></svg></span><a href="partners.html#cat-infrastructure" class="nav-dd-cat">Infrastructure &amp; Hardware</a></div>
+            <ul class="nav-dd-sublist">
+              <li><a href="partners.html#cat-infrastructure">Dell</a></li>
+              <li><a href="partners.html#cat-infrastructure">Cisco</a></li>
+              <li><a href="partners.html#cat-infrastructure">HPE / Aruba</a></li>
+              <li><a href="partners.html#cat-infrastructure">Synology</a></li>
+              <li><a href="partners.html#cat-infrastructure">ExaGrid</a></li>
+              <li><a href="partners.html#cat-infrastructure">KEMP</a></li>
+              <li><a href="partners.html#cat-infrastructure">Radware</a></li>
+              <li><a href="partners.html#cat-infrastructure">F5</a></li>
+              <li><a href="partners.html#cat-infrastructure">Schneider Electric</a></li>
+              <li><a href="partners.html#cat-infrastructure">Panduit</a></li>
+            </ul>
+          </div>
+          <div class="nav-dd-col">
+            <div class="nav-dd-cathead"><span class="nav-dd-cat-icon"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M216,56v56c0,96-88,120-88,120S40,208,40,112V56a8,8,0,0,1,8-8H208A8,8,0,0,1,216,56Z" opacity="0.2"/><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.27,47,25.53a8,8,0,0,0,4.2,0c1-.26,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0Z"/></svg></span><a href="partners.html#cat-cybersecurity" class="nav-dd-cat">Cybersecurity</a></div>
+            <ul class="nav-dd-sublist">
+              <li><a href="partners.html#cat-cybersecurity">Palo Alto Networks</a></li>
+              <li><a href="partners.html#cat-cybersecurity">CrowdStrike</a></li>
+              <li><a href="partners.html#cat-cybersecurity">Fortinet</a></li>
+              <li><a href="partners.html#cat-cybersecurity">Sophos</a></li>
+              <li><a href="partners.html#cat-cybersecurity">Kaspersky</a></li>
+              <li><a href="partners.html#cat-cybersecurity">Trend Micro</a></li>
+              <li><a href="partners.html#cat-cybersecurity">BeyondTrust</a></li>
+              <li><a href="partners.html#cat-cybersecurity">Barracuda</a></li>
+              <li><a href="partners.html#cat-cybersecurity">LinkShadow</a></li>
+              <li><a href="partners.html#cat-cybersecurity">GFI Software</a></li>
+            </ul>
+          </div>
+          <div class="nav-dd-col">
+            <div class="nav-dd-cathead"><span class="nav-dd-cat-icon"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M240,128a80,80,0,0,1-80,80H72A56,56,0,1,1,85.92,97.74l0,.1A80,80,0,0,1,240,128Z" opacity="0.2"/><path d="M160,40A88.09,88.09,0,0,0,81.29,88.67,64,64,0,1,0,72,216h88a88,88,0,0,0,0-176Zm0,160H72a48,48,0,0,1,0-96c1.1,0,2.2,0,3.29.11A88,88,0,0,0,72,128a8,8,0,0,0,16,0,72,72,0,1,1,72,72Z"/></svg></span><a href="partners.html#cat-software" class="nav-dd-cat">Software &amp; Platforms</a></div>
+            <ul class="nav-dd-sublist">
+              <li><a href="partners.html#cat-software">Microsoft</a></li>
+              <li><a href="partners.html#cat-software">VMware</a></li>
+              <li><a href="partners.html#cat-software">Veeam</a></li>
+              <li><a href="partners.html#cat-software">Red Hat</a></li>
+              <li><a href="partners.html#cat-software">Adobe</a></li>
+              <li><a href="partners.html#cat-software">Acronis</a></li>
+              <li><a href="partners.html#cat-software">Avaya</a></li>
+              <li><a href="partners.html#cat-software">Ribbon</a></li>
+              <li><a href="partners.html#cat-software">Veritas</a></li>
+              <li><a href="partners.html#cat-software">Logitech</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li><li class="nav-item has-dd">
+      <a href="services.html">Services<svg class="nav-caret" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav-dd nav-dd-wide">
+        <div class="nav-dd-panel nav-dd-panel-wide">
+          <div class="nav-dd-col">
+            <div class="nav-dd-cathead"><span class="nav-dd-cat-icon"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M216,152v48a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V152a8,8,0,0,1,8-8H208A8,8,0,0,1,216,152ZM208,48H48a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8H208a8,8,0,0,0,8-8V56A8,8,0,0,0,208,48Z" opacity="0.2"/><path d="M208,136H48a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V152A16,16,0,0,0,208,136Zm0,64H48V152H208v48Zm0-160H48A16,16,0,0,0,32,56v48a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V56A16,16,0,0,0,208,40Zm0,64H48V56H208v48ZM192,80a12,12,0,1,1-12-12A12,12,0,0,1,192,80Zm0,96a12,12,0,1,1-12-12A12,12,0,0,1,192,176Z"/></svg></span><a href="services.html#hardware" class="nav-dd-cat">Hardware &amp; Infrastructure</a></div>
             <ul class="nav-dd-sublist">
               <li><a href="services.html#svc-networking">Networking Equipment</a></li>
               <li><a href="services.html#svc-servers-storage">Servers &amp; Storage</a></li>
@@ -292,7 +445,7 @@ footer{background:linear-gradient(180deg,#04060f 0%,#050a22 100%);padding:52px 7
             </ul>
           </div>
           <div class="nav-dd-col">
-            <a href="services.html#professional" class="nav-dd-cat">Professional Services</a>
+            <div class="nav-dd-cathead"><span class="nav-dd-cat-icon"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M232,120v72a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V120Z" opacity="0.2"/><path d="M224,64H176V56a24,24,0,0,0-24-24H104A24,24,0,0,0,80,56v8H32A16,16,0,0,0,16,80V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V80A16,16,0,0,0,224,64ZM96,56a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM32,80H224v32H192v-8a8,8,0,0,0-16,0v8H80v-8a8,8,0,0,0-16,0v8H32ZM224,192H32V128H64v8a8,8,0,0,0,16,0v-8h96v8a8,8,0,0,0,16,0v-8h32v64Z"/></svg></span><a href="services.html#professional" class="nav-dd-cat">Professional Services</a></div>
             <ul class="nav-dd-sublist">
               <li><a href="services.html#svc-it-deployment">IT Infrastructure Deployment</a></li>
               <li><a href="services.html#svc-cyber-consulting">Cybersecurity Consulting &amp; NCA Compliance</a></li>
@@ -303,7 +456,7 @@ footer{background:linear-gradient(180deg,#04060f 0%,#050a22 100%);padding:52px 7
             </ul>
           </div>
           <div class="nav-dd-col">
-            <a href="services.html#digital" class="nav-dd-cat">Digital Solutions</a>
+            <div class="nav-dd-cathead"><span class="nav-dd-cat-icon"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M240,128a80,80,0,0,1-80,80H72A56,56,0,1,1,85.92,97.74l0,.1A80,80,0,0,1,240,128Z" opacity="0.2"/><path d="M160,40A88.09,88.09,0,0,0,81.29,88.67,64,64,0,1,0,72,216h88a88,88,0,0,0,0-176Zm0,160H72a48,48,0,0,1,0-96c1.1,0,2.2,0,3.29.11A88,88,0,0,0,72,128a8,8,0,0,0,16,0,72,72,0,1,1,72,72Z"/></svg></span><a href="services.html#digital" class="nav-dd-cat">Digital Solutions</a></div>
             <ul class="nav-dd-sublist">
               <li><a href="services.html#svc-cloud-services">Cloud Services</a></li>
               <li><a href="services.html#svc-cyber-software">Cybersecurity Software</a></li>
@@ -314,30 +467,18 @@ footer{background:linear-gradient(180deg,#04060f 0%,#050a22 100%);padding:52px 7
           </div>
         </div>
       </div>
-    </li>
-    <li><a href="about.html">About</a></li>
-    <li class="nav-item has-dd">
-      <a href="partners.html">Technology<svg class="nav-caret" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <div class="nav-dd nav-dd-wide">
-        <div class="nav-dd-panel nav-dd-panel-wide">
-          <div class="nav-dd-col">
-            <a href="partners.html#cat-infrastructure" class="nav-dd-cat">Infrastructure &amp; Hardware</a>
-            <div class="nav-dd-brands">Dell &middot; Cisco &middot; HPE/Aruba &middot; Synology &middot; ExaGrid &middot; KEMP &middot; Radware &middot; F5 &middot; Schneider Electric &middot; Panduit</div>
-          </div>
-          <div class="nav-dd-col">
-            <a href="partners.html#cat-cybersecurity" class="nav-dd-cat">Cybersecurity</a>
-            <div class="nav-dd-brands">Palo Alto Networks &middot; CrowdStrike &middot; Fortinet &middot; Sophos &middot; Kaspersky &middot; Trend Micro &middot; BeyondTrust &middot; Barracuda &middot; LinkShadow &middot; GFI Software</div>
-          </div>
-          <div class="nav-dd-col">
-            <a href="partners.html#cat-software" class="nav-dd-cat">Software &amp; Platforms</a>
-            <div class="nav-dd-brands">Microsoft &middot; VMware &middot; Veeam &middot; Red Hat &middot; Adobe &middot; Acronis &middot; Avaya &middot; Ribbon &middot; Veritas &middot; Logitech</div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li><a href="contact.html" class="nav-cta">Contact</a></li>
-  </ul>
+    </li><li><a href="about.html">About</a></li><li><a href="contact.html" class="nav-cta">Contact</a></li></ul>
+  <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
+
+<div class="nav-mobile" id="navMobile">
+  <div class="nav-mobile-inner">
+    <a href="partners.html" class="nav-mobile-link">Technology</a>
+    <a href="services.html" class="nav-mobile-link">Services</a>
+    <a href="about.html" class="nav-mobile-link">About</a>
+    <a href="contact.html" class="nav-mobile-cta">Contact</a>
+  </div>
+</div>
 
 <section class="page-hero" data-nav="light">
   <div class="ph-orb ph-orb1"></div>
@@ -457,31 +598,39 @@ footer{background:linear-gradient(180deg,#04060f 0%,#050a22 100%);padding:52px 7
   </div>
 </section>
 
-<section class="map-section" data-nav="light">
-  <img class="map-vector-bg" src="assets/images/map-section-backdrop.png" alt="" aria-hidden="true">
-  <div class="map-grid">
-    <a class="map-pill reveal" href="https://www.google.com/maps/search/?api=1&query=Adam+Ibn+Rabiah+Street%2C+Al+Malaz%2C+Riyadh%2C+Saudi+Arabia" target="_blank" rel="noopener" aria-label="Open OVEEQ Technologies office location in Google Maps">
-      <img class="rz-map" src="assets/images/riyadh-map-illustration.png" alt="Illustrated map of Riyadh showing OVEEQ Technologies office location in Al Malaz district">
-      <div class="map-pill-hint">Hover to zoom · click for directions</div>
-    </a>
-    <div class="map-side reveal d1">
-      <div class="map-tag">Find Us</div>
-      <div class="map-title">Al Malaz District,<br>Riyadh.</div>
-      <p class="map-sub">Building No. 7450, Adam Ibn Rabiah Street. Hover the map to zoom from the city view into our exact location.</p>
-      <div class="map-actions">
-        <a class="map-pill-btn primary" href="https://www.google.com/maps/dir/?api=1&destination=Adam+Ibn+Rabiah+Street%2C+Al+Malaz%2C+Riyadh%2C+Saudi+Arabia" target="_blank" rel="noopener"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M221.6,133.63l-72-88a8,8,0,0,0-12.41,10.1L192.15,120H40a8,8,0,0,0,0,16H192.15l-54.96,64.27a8,8,0,1,0,12.41,10.1l72-88A8,8,0,0,0,221.6,133.63Z" transform="rotate(-45 128 128)"/></svg>Get Directions</a>
-        <a class="map-pill-btn" href="https://www.google.com/maps/search/?api=1&query=Adam+Ibn+Rabiah+Street%2C+Al+Malaz%2C+Riyadh%2C+Saudi+Arabia" target="_blank" rel="noopener"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M228.24,49.51A8,8,0,0,0,222,44.14a95.34,95.34,0,0,0-79.7,25.71A96.14,96.14,0,0,0,88,52c-45.51.11-83.32,37.16-84.29,82.65a95.42,95.42,0,0,0,25.72,68.55A8,8,0,0,0,35,204l35-35,29-29,29-29a8,8,0,0,1,11.31,0l29,29,29,29,35,35a8,8,0,0,0,5.6,3.2c.15,0,.31,0,.46,0a8,8,0,0,0,5.66-2.34A95.34,95.34,0,0,0,228.24,49.51Z" opacity="0"/><path d="M128,24a80,80,0,0,0-80,80c0,72,80,128,80,128s80-56,80-128A80,80,0,0,0,128,24Zm0,112a32,32,0,1,1,32-32A32,32,0,0,1,128,136Z"/></svg>Share Location</a>
+<section class="map-section" data-nav="dark">
+  <a class="map-full reveal" href="https://www.google.com/maps/search/?api=1&query=Adam+Ibn+Rabiah+Street%2C+Al+Malaz%2C+Riyadh%2C+Saudi+Arabia" target="_blank" rel="noopener" aria-label="Open OVEEQ Technologies office location in Google Maps">
+    <img class="map-photo" src="assets/images/map-riyadh-almalaz.jpg" alt="Map of Al Malaz district, Riyadh, showing the streets and landmarks around the OVEEQ Technologies office, with a pin marking Adam Ibn Rabiah Street" loading="lazy">
+  </a>
+  <div class="map-overlay-card reveal">
+    <div class="map-tag">Find Us</div>
+    <div class="map-title">Al Malaz District,<br>Riyadh.</div>
+    <p class="map-sub">Building No. 7450, Adam Ibn Rabiah Street.</p>
+    <div class="map-actions">
+      <a class="map-pill-btn primary" href="https://www.google.com/maps/dir/?api=1&destination=Adam+Ibn+Rabiah+Street%2C+Al+Malaz%2C+Riyadh%2C+Saudi+Arabia" target="_blank" rel="noopener"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M221.6,133.63l-72-88a8,8,0,0,0-12.41,10.1L192.15,120H40a8,8,0,0,0,0,16H192.15l-54.96,64.27a8,8,0,1,0,12.41,10.1l72-88A8,8,0,0,0,221.6,133.63Z" transform="rotate(-45 128 128)"/></svg>Get Directions</a>
+      <a class="map-pill-btn" href="https://www.google.com/maps/search/?api=1&query=Adam+Ibn+Rabiah+Street%2C+Al+Malaz%2C+Riyadh%2C+Saudi+Arabia" target="_blank" rel="noopener"><svg viewBox="0 0 256 256" fill="currentColor"><path d="M228.24,49.51A8,8,0,0,0,222,44.14a95.34,95.34,0,0,0-79.7,25.71A96.14,96.14,0,0,0,88,52c-45.51.11-83.32,37.16-84.29,82.65a95.42,95.42,0,0,0,25.72,68.55A8,8,0,0,0,35,204l35-35,29-29,29-29a8,8,0,0,1,11.31,0l29,29,29,29,35,35a8,8,0,0,0,5.6,3.2c.15,0,.31,0,.46,0a8,8,0,0,0,5.66-2.34A95.34,95.34,0,0,0,228.24,49.51Z" opacity="0"/><path d="M128,24a80,80,0,0,0-80,80c0,72,80,128,80,128s80-56,80-128A80,80,0,0,0,128,24Zm0,112a32,32,0,1,1,32-32A32,32,0,0,1,128,136Z"/></svg>Share Location</a>
+    </div>
+    <div class="map-details">
+      <div class="map-details-tag">Details</div>
+      <div class="map-details-list">
+        <div class="mdi"><div class="mdi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 21v-4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4"/><line x1="9" y1="7" x2="9.01" y2="7"/><line x1="15" y1="7" x2="15.01" y2="7"/><line x1="9" y1="11" x2="9.01" y2="11"/><line x1="15" y1="11" x2="15.01" y2="11"/></svg></div><div class="mdi-body"><span class="mdi-label">Building No.</span><span class="mdi-value">7450</span></div></div>
+        <div class="mdi"><div class="mdi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="4" x2="4" y2="20"/><line x1="15" y1="4" x2="20" y2="20"/><line x1="10.4" y1="14" x2="13.6" y2="14"/><line x1="9.5" y1="17" x2="14.5" y2="17"/></svg></div><div class="mdi-body"><span class="mdi-label">Street</span><span class="mdi-value">Adam Ibn Rabiah Street</span></div></div>
+        <div class="mdi"><div class="mdi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></div><div class="mdi-body"><span class="mdi-label">District</span><span class="mdi-value">Al Malaz District</span></div></div>
+        <div class="mdi"><div class="mdi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l5-4 5 4v11"/><path d="M13 21V6l4-3 4 3v15"/><line x1="3" y1="21" x2="21" y2="21"/></svg></div><div class="mdi-body"><span class="mdi-label">City</span><span class="mdi-value">Riyadh</span></div></div>
+        <div class="mdi"><div class="mdi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"/><path d="M5 4h13l-3 4 3 4H5"/></svg></div><div class="mdi-body"><span class="mdi-label">Country</span><span class="mdi-value">Saudi Arabia</span></div></div>
       </div>
     </div>
   </div>
 </section>
 
 <section class="location-banner" data-nav="dark">
-  <img src="assets/images/riyadh-location-collage-v2.jpg" alt="A grid of photographs of landmarks and landscapes across Saudi Arabia, including the Two Holy Mosques, Riyadh's skyline, desert canyons, oases, and coastlines" loading="lazy">
-  <div class="location-banner-overlay"></div>
-  <div class="location-banner-content">
-    <div class="lb-tag">Our Home</div>
-    <div class="lb-title">Proudly based in <span class="accent">Riyadh</span>, serving clients Kingdom-wide.</div>
+  <div class="location-banner-clip">
+    <img src="assets/images/riyadh-location-collage-v2.jpg" alt="Riyadh skyline silhouetted against a dramatic sunset, with the Kingdom Centre Tower at the horizon" loading="lazy">
+    <div class="location-banner-overlay"></div>
+    <div class="location-banner-content">
+      <div class="lb-tag">Our Home</div>
+      <div class="lb-title">Proudly based in <span class="accent">Riyadh</span>, serving clients Kingdom-wide.</div>
+    </div>
   </div>
 </section>
 
@@ -564,6 +713,26 @@ function handleSubmit(e){
     }
     window.addEventListener('scroll',updateNav,{passive:true});
     updateNav();
+  })();
+
+  // Mobile nav menu
+  (function(){
+    var burger=document.getElementById('navBurger'),panel=document.getElementById('navMobile'),navEl=document.getElementById('nav');
+    if(!burger||!panel||!navEl) return;
+    function setOpen(isOpen){
+      panel.classList.toggle('open',isOpen);
+      burger.classList.toggle('open',isOpen);
+      burger.setAttribute('aria-expanded',isOpen);
+      navEl.style.zIndex=isOpen?'200':'';
+      document.body.style.overflow=isOpen?'hidden':'';
+    }
+    burger.addEventListener('click',function(){setOpen(!panel.classList.contains('open'))});
+    panel.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setOpen(false)})});
+    window.addEventListener('resize',function(){if(window.innerWidth>860)setOpen(false)});
+    var path=(location.pathname.split('/').pop()||'index.html');
+    document.querySelectorAll('.nav-mobile-link,.nav-mobile-cta').forEach(function(a){
+      if(a.getAttribute('href')===path) a.classList.add('active');
+    });
   })();
 </script>
 <style>
